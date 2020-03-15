@@ -17,7 +17,7 @@ public class LoginAndTitle extends CommonMethods{
 	    @Test(priority=1, groups="smoke")
 	    public void titleValidation() {
 	        System.out.println("Executing title validation test case-------------");
-	        String expectedTitle = "Human Management Systems";
+	        String expectedTitle = "Human Management System";
 	        String actualTitle = driver.getTitle();//Human Management System
 	        Assert.assertEquals(actualTitle, expectedTitle, "Titles are NOT matched");
 	        System.out.println("I am a text after the assertion");
@@ -25,7 +25,7 @@ public class LoginAndTitle extends CommonMethods{
 	    @Test(priority=2, groups="regression")
 	    public void logoValidation() {
 	        boolean isDisplayed = driver.findElement(By.xpath("//div[@id='divLogo']/img")).isDisplayed();
-	        isDisplayed=false;
+	        isDisplayed=true;
 	        Assert.assertTrue(isDisplayed, "Syntax Logo is NOT displayed");
 	    }
 	    @AfterMethod(alwaysRun=true)

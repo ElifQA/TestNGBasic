@@ -41,12 +41,12 @@ public class HWDataProvider extends CommonMethods{
 	
 	@BeforeClass(alwaysRun=true)
 	public void openAndLogin() throws InterruptedException {
-		setUp("chrome", "http://166.62.36.207/humanresources/symfony/web/index.php/auth/login");
+		setUp("chrome", "http://166.62.36.207/Syntax_HRM");
 	}
 		@BeforeMethod
 		    public void logIn() throws InterruptedException {
-		        driver.findElement(By.id("txtUsername")).sendKeys("admin");
-		        driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
+		        driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+		        driver.findElement(By.id("txtPassword")).sendKeys("Syntax@123");
 		        driver.findElement(By.id("btnLogin")).click();
 		        Thread.sleep(1000);
 		        driver.findElement(By.id("menu_pim_viewPimModule")).click();
